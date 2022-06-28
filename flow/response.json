@@ -27,7 +27,7 @@
             "\n Si necesitas ver más info sobre tu equipo ",
             "escribe *cursos* o *info* o escribe *audio*"
         ],
-        "media":"https://media2.giphy.com/media/VQJu0IeULuAmCwf5SL/giphy.gif",
+        "media":"https://media.giphy.com/media/y6Zc3STnM2obyW3IwL/giphy.gif",
         "trigger":null,
         "actions":{
             "title":"¿Que te interesa ver?",
@@ -51,7 +51,7 @@
             "*AWS* Basico (Pago) \n\n",
             "Escribe la palabra del tema que te interese \n"
         ],
-        "media":"https://i.giphy.com/media/5J5gN0WUk0VToHaK2p/giphy-downsized.gif",
+        "media":"<https://media.giphy.com/media/y6Zc3STnM2obyW3IwL/giphy.gif",
         "trigger":null
     },
     "STEP_2_1":{
