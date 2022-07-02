@@ -26,19 +26,22 @@
     },
     {
         "keywords":  [
-            "activacion"
+            "activacion",
+            "activación"
         ],
         "key": "STEP_2_1"
     },
     {
         "keywords":  [
-            "node"
+            "tienda",
+            "Tienda"
         ],
         "key": "STEP_2_2"
     },
     {
         "keywords":  [
-            "ngrx"
+            "horario",
+            "Horario"
         ],
         "key": "STEP_2_3"
     },
