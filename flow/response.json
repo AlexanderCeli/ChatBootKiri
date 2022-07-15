@@ -22,12 +22,12 @@
     },
     "STEP_1":{
         "replyMessage":[
-            "¿Hola cómo estás? Bienvenido a *Kirios*! Mi nombre es *KIRI 🤖* y estoy a tu disposición.\n",
+            "¡Hola! soy *🤖 KIRI 🤖* el asesor de kirios.\n",
             "En primer lugar, quiero entender mejor la razón de tu contacto para poder ayudarte!😎  \n",
-            "\n Si necesitas ver más info sobre tu equipo ",
-            "escribe *equipo* o si deseas una activacion de office escribe *activacion* \n",
-            "si desea ver nuestros productos puede visitar en nuestra tienda en linea escribiendo *tienda* \n",
-            "para saber sobre nuestros horarios de atencio escriba *horario*"
+            "\n 1️⃣Información sobre tu equipo ",
+            "\n 2️⃣Ayuda con Activacion de Office ",
+            "\n 3️⃣Ventas ",
+            "\n 4️⃣para saber sobre nuestros horarios de atencio escriba *horario*"
         ],
         "media":"https://i.giphy.com/media/y6Zc3STnM2obyW3IwL/giphy.gif",
         "trigger":null,
@@ -45,16 +45,21 @@
     "STEP_2":{
         "replyMessage":[
             "Perfecto, me ayuda enviando una foto de la orden ",
-            "o enviandonos el numero de la orden para poder revisar 🙂🤖 \n\n"
+            "o enviandonos el numero de la orden para poder revisar 🙂🤖 \n\n",
+
+            "Recuerda que puedes revisar el estado de tu equipo en https://www.kinetsupport.com/ \n",
+            "con tu usuario y contraseña que se genera automaticamente en la orden",
+            "El ususario lo observa en la orden como se ve en la imagen, y la contraseña es su numero de cedúla"
+            
         ],
-        "media":"https://i.giphy.com/media/y6Zc3STnM2obyW3IwL/giphy.gif",
+        "media":"https://i.imgur.com/5XesHJd.jpg",
         "trigger":null
     },
     "STEP_2_1":{
         "replyMessage":[
             "Para poder realizar la activacion abra el programa *Anny Desk* \n",
-            "despues nos envia el codigo que le muestra en la pantalla \n\n",
-            "y nos acepta la solitud para proceder con la activacion \n\n",
+            "despues nos envia el codigo que le muestra en la pantalla \n",
+            "y nos acepta la solitud para proceder con la activacion \n",
             
             "😎😎😎"
         ],
@@ -74,8 +79,8 @@
     "STEP_2_3":{
         "replyMessage":[
             "Nuestro horario de atencion es de: \n",
-            "* 9:00 am* a *13:00 pm*\n",
-            "*15:00 pm* a *19:00 pm! 😮"
+            " *9:00 am* a *13:00 pm*\n",
+            "*15:00 pm* a *19:00 pm*! "
         ],
         "media":null,
         "trigger":null

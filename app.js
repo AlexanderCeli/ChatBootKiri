@@ -17,7 +17,7 @@ const { sendMedia, sendMessage, lastTrigger, sendMessageButton, readChat } = req
 const app = express();
 app.use(cors())
 app.use(express.json())
-const MULTI_DEVICE = process.env.MULTI_DEVICE || 'true';
+const MULTI_DEVICE = process.env.MULTI_DEVICE || 'false';
 const server = require('http').Server(app)
 
 const port = process.env.PORT || 3000
@@ -197,7 +197,7 @@ const withOutSession = () => {
 /**
  * Revisamos si existe archivo con credenciales!
  */
-(fs.existsSync(SESSION_FILE_PATH) && MULTI_DEVICE === 'false') ? withSession() : withOutSession();
+(fs.existsSync(SESSION_FILE_PATH) && MULTI_DEVICE === 'true') ? withSession() : withOutSession();
 
 /**
  * Verificamos si tienes un gesto de db
