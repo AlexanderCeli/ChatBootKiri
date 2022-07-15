@@ -24,10 +24,10 @@
         "replyMessage":[
             "¡Hola! soy *🤖 KIRI 🤖* el asesor de kirios.\n",
             "En primer lugar, quiero entender mejor la razón de tu contacto para poder ayudarte!😎  \n",
-            "\n 1️⃣Información sobre tu equipo ",
-            "\n 2️⃣Ayuda con Activacion de Office ",
-            "\n 3️⃣Ventas ",
-            "\n 4️⃣para saber sobre nuestros horarios de atencio escriba *horario*"
+            "\n 1️⃣ Información sobre tu equipo ",
+            "\n 2️⃣ Ayuda con Activacion de Office ",
+            "\n 3️⃣ Ventas ",
+            "\n 4️⃣ Nuestro horarios de atención"
         ],
         "media":"https://i.giphy.com/media/y6Zc3STnM2obyW3IwL/giphy.gif",
         "trigger":null,
