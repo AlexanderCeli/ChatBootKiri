@@ -15,12 +15,17 @@ const { saveMessage } = require('../adapter')
  * @param {*} fileName 
  */
 
-const sendMedia = (client, number, fileName) => {
-    number = cleanNumber(number)
-    const file = `${DIR_MEDIA}/${fileName}`;
-    if (fs.existsSync(file)) {
-        const media = MessageMedia.fromFilePath(file);
-        client.sendMessage(number, media, { sendAudioAsVoice: true });
+const sendMedia = (client, number = null, fileName = null) => {
+    if(!client) return console.error("El objeto cliente no está definido.");
+    try {
+        number = cleanNumber(number || 0)
+        const file = `${DIR_MEDIA}/${fileName}`;
+        if (fs.existsSync(file)) {
+            const media = MessageMedia.fromFilePath(file);
+            client.sendMessage(number, media, { sendAudioAsVoice: true });
+        }
+    } catch(e) {
+        throw e;
     }
 }
 
@@ -30,15 +35,21 @@ const sendMedia = (client, number, fileName) => {
  * @param {*} fileName 
  */
 
- const sendMediaVoiceNote = (client, number, fileName) => {
-    number = cleanNumber(number)
-    const file = `${DIR_MEDIA}/${fileName}`;
-    if (fs.existsSync(file)) {
-        const media = MessageMedia.fromFilePath(file);
-        client.sendMessage(number, media ,{ sendAudioAsVoice: true });
-    }
+ const sendMediaVoiceNote = (client, number = null, fileName = null) => {
+     if(!client) return console.error("El objeto cliente no está definido.");
+     try { 
+        number = cleanNumber(number || 0)
+        const file = `${DIR_MEDIA}/${fileName}`;
+        if (fs.existsSync(file)) {
+            const media = MessageMedia.fromFilePath(file);
+            client.sendMessage(number, media ,{ sendAudioAsVoice: true });
+
+        }
+    }catch(e) {
+        throw e;
 }
 
+}
 /**
  * Enviamos un mensaje simple (texto) a nuestro cliente
  * @param {*} number 
@@ -58,12 +69,14 @@ const sendMessage = async (client, number = null, text = null, trigger = null) =
  * @param {*} number 
  */
 const sendMessageButton = async (client, number = null, text = null, actionButtons) => {
+    setTimeout(async () => {
     number = cleanNumber(number)
     const { title = null, message = null, footer = null, buttons = [] } = actionButtons;
     let button = new Buttons(message,[...buttons], title, footer);
     client.sendMessage(number, button);
-
+    await readChat(number, message, actionButtons)
     console.log(`⚡⚡⚡ Enviando mensajes....`);
+    }, DELAY_TIME)
 }
 
 
@@ -97,6 +110,8 @@ const readChat = async (number, message, trigger = null) => {
     number = cleanNumber(number)
     await saveMessage( message, trigger, number )
     console.log('Saved')
+    
 }
+
 
 module.exports = { sendMessage, sendMedia, lastTrigger, sendMessageButton, readChat, sendMediaVoiceNote }
